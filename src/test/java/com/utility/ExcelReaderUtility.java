@@ -25,7 +25,7 @@ public class ExcelReaderUtility {
         }
         XSSFSheet sheet = workbook.getSheetAt(0);
         List<User> userList = new ArrayList<>();
-        User userData = null;
+        User userData;
         Iterator<Row> rowIterator= sheet.iterator();
         rowIterator.next();
         while (rowIterator.hasNext()) {

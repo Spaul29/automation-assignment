@@ -1,5 +1,5 @@
 package com.constants;
 
 public enum Browser {
-    CHROME, SAFARI, FIREFOX;
+    CHROME, SAFARI, FIREFOX
 }

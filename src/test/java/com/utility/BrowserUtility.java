@@ -18,7 +18,7 @@ public abstract class BrowserUtility {
 
     Logger logger = LoggerUtility.getLogger(this.getClass());
 
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     protected WebDriver getDriver() {
         return driver.get();

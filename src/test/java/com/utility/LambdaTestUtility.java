@@ -11,9 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LambdaTestUtility {
-    private static String hubURL = "https://hub.lambdatest.com/wd/hub";
-    private static ThreadLocal<WebDriver> driverLocal = new ThreadLocal<>();
-    private static ThreadLocal<DesiredCapabilities> capabilitiesLocal = new ThreadLocal<>();
+    private static final String hubURL = "https://hub.lambdatest.com/wd/hub";
+    private static final ThreadLocal<WebDriver> driverLocal = new ThreadLocal<>();
+    private static final ThreadLocal<DesiredCapabilities> capabilitiesLocal = new ThreadLocal<>();
 
     public static WebDriver initializeLambdaTestSession(String browserName, String testName) {
         DesiredCapabilities capabilities = new DesiredCapabilities();

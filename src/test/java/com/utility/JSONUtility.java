@@ -17,7 +17,7 @@ public class JSONUtility {
 
         Gson gson = new Gson();
         File jsonFile = new File(System.getProperty("user.dir") + "/config/config.json");
-        FileReader fileReader = null;
+        FileReader fileReader;
         try {
             fileReader = new FileReader(jsonFile);
         } catch (FileNotFoundException e) {
