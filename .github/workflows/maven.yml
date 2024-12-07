@@ -39,7 +39,7 @@ jobs:
       uses: actions/upload-artifact@v4.4.3
       with:
         name: Test Reports
-        path: test-report.html
+        path: report.html
 
     - name: Test Execution Status
       run: echo "Test Execution Completed"

@@ -53,7 +53,7 @@ public class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         logger.info("Test Suite Started");
-        ExtentReportUtility.setUpExtentReporter("test-report.html");
+        ExtentReportUtility.setUpExtentReporter("report.html");
     }
 
     @Override

@@ -107,7 +107,7 @@ public abstract class BrowserUtility {
         File screenshotData = screenshot.getScreenshotAs(OutputType.FILE);
 
         // Ensure directory exists
-        String dirPath = System.getProperty("user.dir") + "/screenshots/";
+        String dirPath =  "./screenshots/";
         File dir = new File(dirPath);
         if (!dir.exists()) {
             dir.mkdirs();
