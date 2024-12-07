@@ -24,9 +24,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Set working directory
-      run: cd automation-assignment
-
     - name: Running test automation scripts with maven
       run: mvn test -X -DbrowserName=chrome -DisLambdaTest=true -DisHeadless=false
 
