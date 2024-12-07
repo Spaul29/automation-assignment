@@ -26,12 +26,10 @@ jobs:
 
     - name:
         Debug: List files
-      run: |
-        echo "Listing files in the current directory:"
-        ls -R
+        run: ls -R
 
     - name: Running test automation scripts with maven
-      run: mvn test -X -DbrowserName=chrome -DisLambdaTest=true -DisHeadless=false
+      run: mvn test -X -Dsurefire.suiteXmlFiles=automation-assignment/testng.xml -DbrowserName=chrome -DisLambdaTest=true -DisHeadless=false
 
     - name: Upload test logs
       if: always()
