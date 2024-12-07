@@ -24,6 +24,12 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
+    - name:
+        Debug: List files
+      run: |
+        echo "Listing files in the current directory:"
+        ls -R
+
     - name: Running test automation scripts with maven
       run: mvn test -X -DbrowserName=chrome -DisLambdaTest=true -DisHeadless=false
 
