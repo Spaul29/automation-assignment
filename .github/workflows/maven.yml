@@ -25,7 +25,7 @@ jobs:
         cache: maven
 
     - name: Running Test Automation Framework with Maven
-      run: mvn test -X "-Dsurefire.suiteXmlFiles=automation-assignment/testNG.xml" "-DbrowserName=chrome" "-DisLambdaTest=true" "-DisHeadLess=false"
+      run: mvn test -X "-DbrowserName=chrome" "-DisLambdaTest=true" "-DisHeadLess=false"
 
     - name: Upload Test logs
       if: always()
