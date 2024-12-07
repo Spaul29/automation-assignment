@@ -24,25 +24,22 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Debug:List files
-      run: ls -R
+    - name: Running Test Automation Framework with Maven
+      run: mvn test -X "-DbrowserName=chrome" "-DisLambdaTest=true" "-DisHeadLess=false"
 
-    - name: Running test automation scripts with maven
-      run: mvn test -X -Dsurefire.suiteXmlFiles=automation-assignment/testng.xml -DbrowserName=chrome -DisLambdaTest=true -DisHeadless=false
-
-    - name: Upload test logs
+    - name: Upload Test logs
       if: always()
       uses: actions/upload-artifact@v4.4.3
       with:
-        name: automation-logs
-        path: logs/automation.log
+        name: Test logs
+        path: logs/
 
-    - name: Archive Extent Reports
+    - name: Upload Test Reports
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.4.3
       with:
-       name: extent-reports
-       path: reports/test-report.html
+        name: Test Reports
+        path: test-report.html
 
     - name: Test Execution Status
-      run: echo "Test Execution completed"
+      run: echo "Test Execution Completed"
