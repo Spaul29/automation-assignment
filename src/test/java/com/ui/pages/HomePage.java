@@ -27,7 +27,7 @@ public final class HomePage extends BrowserUtility {
         maximizeWindow();
     }
 
-    public LoginPage goToLogin() {
+    public LoginPage goToLoginPage() {
         logger.info("Go to Sign In Page");
         clickOn(SIGN_IN_LINK_LOCATOR);
         return new LoginPage(getDriver());

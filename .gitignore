@@ -36,7 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/reports/
+report.html
 /logs/
 /.idea/
 /screenshots/

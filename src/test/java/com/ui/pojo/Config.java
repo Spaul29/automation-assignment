@@ -1,16 +1,14 @@
 package com.ui.pojo;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Map;
 
+@Setter
+@Getter
 public class Config {
 
     private Map<String,Environment> environments;
 
-    public Map<String, Environment> getEnvironments() {
-        return environments;
-    }
-
-    public void setEnvironments(Map<String, Environment> environments) {
-        this.environments = environments;
-    }
 }
